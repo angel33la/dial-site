@@ -1,0 +1,424 @@
+:root {
+    --ink: #20252b;
+    --paper: #f7f5f0;
+    --muted: #e9e7e1;
+    --orange: #e77732;
+    --gray: #5f6871;
+    --white: #fff;
+    --max: 1100px;
+}
+
+@font-face {
+    font-family: 'Bikers Church';
+    src: url('fonts/Bikers Church.ttf') format('ttf'),
+        url('fonts/Bikers Church.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* For your main, impactful headings */
+h1,
+.brand strong{
+    font-family: 'Bikers Church', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* For everything else on the website */
+p,
+a,
+button,
+input,
+nav {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #222222;
+    /* A dark charcoal is easier on the eyes than pure black */
+}
+
+
+a {
+    color: inherit;
+}
+
+.site-header {
+    max-width: var(--max);
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--ink);
+    color: var(--white);
+    font-weight: 800;
+    border-bottom: 4px solid var(--orange);
+}
+
+.brand strong,
+.brand small {
+    display: block;
+    line-height: 1.25;
+}
+
+.brand small {
+    color: var(--gray);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: .95rem;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #b94e10;
+}
+
+.hero {
+    background: var(--ink);
+    color: var(--white);
+    padding: clamp(60px, 9vw, 110px) max(24px, calc((100% - var(--max))/2));
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-size: .78rem;
+    letter-spacing: .13em;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1.02;
+    max-width: 850px;
+    margin-bottom: 22px;
+    letter-spacing: -.04em;
+}
+
+.hero-copy {
+    font-size: 1.2rem;
+    color: #e1e4e7;
+    max-width: 690px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 28px 0 16px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    border: 2px solid transparent;
+    min-height: 48px;
+    transition: transform 0.2s,
+    opacity 0.2s;
+    min-width: 140px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between logo and text */
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.button-primary {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.button-primary:hover {
+    background: #f28a48;
+}
+
+.button-secondary {
+    border-color: #aeb4ba;
+    color: inherit;
+    background: transparent;
+}
+
+.button-secondary:hover {
+    border-color: var(--orange);
+}
+
+/* Official Branding Colors & Hover Effects */
+.facebook {
+    background-color: #1877F2;
+    /* Official Facebook Blue */
+    color: var(--white);
+}
+
+.instagram {
+    /* Official Instagram Gradient */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: var(--white);
+}
+
+/* Hover effects */
+.social-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.fine-print {
+    font-size: .82rem;
+    color: #bfc5ca;
+    max-width: 780px;
+    margin: 18px 0 0;
+}
+
+.offer {
+    max-width: var(--max);
+    margin: 32px auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #f2dfcf;
+    border-left: 6px solid var(--orange);
+    border-radius: 10px;
+}
+
+.offer h2 {
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    margin-bottom: 8px;
+}
+
+.offer p:last-child {
+    margin-bottom: 0;
+    max-width: 680px;
+}
+
+.button-dark {
+    background: var(--ink);
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.section,
+.contact-section {
+    max-width: var(--max);
+    margin: auto;
+    padding: 70px 24px;
+}
+
+.section h2,
+.contact-section h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -.025em;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 28px 0 48px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e3e1dc;
+}
+
+.service-icon {
+    color: var(--orange);
+    font-size: .8rem;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+.service-card h3 {
+    margin: 18px 0 8px;
+    font-size: 1.12rem;
+}
+
+.service-card p,
+.secondary-copy {
+    color: var(--gray);
+    margin-bottom: 0;
+}
+
+.subheading {
+    font-size: 1.6rem !important;
+}
+
+.section-muted {
+    background: var(--muted);
+    max-width: none;
+    padding-left: max(24px, calc((100% - var(--max))/2));
+    padding-right: max(24px, calc((100% - var(--max))/2));
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.steps div {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.steps span {
+    flex: 0 0 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    background: var(--orange);
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.steps p {
+    margin: 4px 0;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section>p:not(.eyebrow) {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--gray)
+}
+
+.contact-section .hero-actions {
+    justify-content: center;
+}
+
+footer {
+    background: #171b20;
+    color: #c6cbd0;
+    text-align: center;
+    padding: 26px 20px;
+    font-size: .83rem;
+}
+
+footer p {
+    margin: 4px;
+    color: #c6cbd0;
+}
+
+@media(max-width:850px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offer {
+        margin: 20px 16px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:600px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-header nav {
+        width: 100%;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 60px 24px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section,
+    .contact-section {
+        padding: 52px 22px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .hero-actions {
+        width: 100%;
+    }
+
+    .hero-actions a {
+        flex: 1;
+    }
+}
